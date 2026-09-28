@@ -8,13 +8,18 @@
  * @author LENOVO
  */
 public class NewMain {
-    public static void main(String[] args){
-        Manusia pekerja = new Pekerja("Abdullah", 26, "Admin Slot", 20000000);
-        
-        // Cetak hasil dari method toString()
-        System.out.println(pekerja.toString());
+    public static void main(String[] args) {
+        KeranjangBelanja keranjang = new KeranjangBelanja();
+
+        keranjang.tambahProduk(new Buku("Hujan Tere Liye", 100000));
+        keranjang.tambahProduk(new Elektronik("Setrika", 150000));
+        keranjang.tambahProduk(new Pakaian("Hijab", 80000));
+
+        keranjang.tampilkanRincian();
+        System.out.println("Total setelah diskon: " + keranjang.hitungTotalHarga());
+    /**
+     * @param args the command line arguments
+     */ 
+    
     }
 }
-
-    
-
