@@ -7,13 +7,22 @@
  *
  * @author LENOVO
  */
-public class Elektronik extends Produk {
-     public Elektronik(String nama, double harga) {
-        super(nama, harga);
-    }
-
-    @Override
-    public double hitungDiskon() {
-        return harga * 0.05;
-    }
+public class Elektronik extends Produk{
+    private int garansi; //dalam tahun
+            
+public Elektronik(String namaProduk, double harga, int garansi){
+    super(namaProduk, harga);
+    this.garansi = garansi;
+}
+public int getgaransi(){
+    return garansi;
+}
+public void setgaransi(int garansi){
+    this.garansi = garansi;
+}
+@Override
+public void tampilkanInfo(){
+    super.tampilkanInfo();
+    System.out.println("Garansi            : " + garansi + "tahun");    
+}    
 }
